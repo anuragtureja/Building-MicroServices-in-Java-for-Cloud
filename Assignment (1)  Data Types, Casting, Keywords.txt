@@ -1,0 +1,119 @@
+1. What are Primitive Data types in java ?
+
+In Java, primitive data types are the most basic data types built into the language. They are not objects and do not have methods. Java has eight primitive data types:
+
+byte: 8-bit integer.
+short: 16-bit integer.
+int: 32-bit integer.
+long: 64-bit integer.
+float: 32-bit floating point.
+double: 64-bit floating point.
+char: 16-bit Unicode character.
+boolean: true or false.
+These primitive types are used to store simple values directly in memory.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+2. What are Identifiers in java ?
+
+In Java, identifiers are names given to various program elements such as variables, methods, classes, packages, and interfaces. These names are used to uniquely identify these elements within a Java program. Here are the rules for Java identifiers:
+
+Must begin with a letter (A-Z or a-z), currency character ($), or an underscore (_)
+Can be followed by letters (A-Z or a-z), digits (0-9), currency characters, or underscores
+Cannot contain spaces
+Cannot be a keyword reserved by Java
+Are case-sensitive
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+3. What is Final class in java ?
+
+A final class in Java is one that cannot be subclassed or extended. It's marked with the keyword 'final'. This prevents any further inheritance, ensuring that the class's design remains unchanged. For example:
+
+final class MyClass {
+    // Class members and methods
+}
+
+
+In this declaration, 'MyClass' is declared as final, meaning it cannot be extended further
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+4. What are the two ways to make a class final ?
+
+In Java, there are two ways to make a class final:
+
+Using the 'final' keyword: You can directly declare a class as final by using the 'final' keyword before the class declaration. This prevents the class from being subclassed.
+
+Example:
+
+final class MyClass {
+    // Class members and methods
+}
+
+
+Preventing inheritance: Another way to make a class final is by preventing inheritance implicitly. You can achieve this by making all constructors of the class private or package-private, ensuring that no other class can subclass it.
+
+Example:
+
+public class MyClass {
+    private MyClass() {
+        // Private constructor prevents instantiation
+    }
+
+    // Other class members and methods
+}
+
+
+In both cases, the class cannot be subclassed or extended further.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+5. Can we create an instance of Final class in another class ?
+
+Yes, we can create an instance of a final class in another class. The final keyword in Java only restricts subclassing, not instance creation
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+6. What is Volatile Keyword used for ?
+
+volatile in Java is used to ensure that changes to a variable are immediately visible to other threads and to prevent certain optimizations that could lead to inconsistent behavior in concurrent programs.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+7. What is the use of Transient Keyword ?
+
+In Java, the transient keyword is used to indicate to the Java serialization mechanism that a particular field should not be serialized when an object is converted into a byte stream and then deserialized back into an object.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+8. What are the types of casting ?
+
+There are two types of casting 
+a) Implicit Casting
+b) Explicit Casting
+
+a) Implicit Casting (Widening Conversion): Implicit casting occurs automatically when you assign a value of a smaller data type to a variable of a larger data type. Since the smaller data type can be safely accommodated within the larger data type without losing information, Java performs the conversion implicitly.
+
+b) Explicit Casting (Narrowing Conversion): Explicit casting is required when you assign a value of a larger data type to a variable of a smaller data type. This type of casting requires an explicit casting operator. Since narrowing conversion can result in loss of information (e.g., truncation of decimal places), explicit casting requires you to acknowledge and explicitly state your intention to perform the conversion. 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+9. What is boxing and unboxing ?
+
+a) Boxing: Boxing is the process of converting a primitive data type into its corresponding wrapper class object. This happens automatically by the compiler when necessary. 
+
+b) Unboxing: Unboxing is the process of converting a wrapper class object back to its corresponding primitive data type. This also happens automatically by the compiler when necessary.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+10. What are the difference between Keywords, Identifiers and Literlas in java ?
+
+Keywords: Reserved words with predefined meanings in Java. Examples: public, class, if, else.
+
+Identifiers: User-defined names for program elements like variables, methods, classes, etc. Must follow certain rules and cannot be Java keywords.
+
+Literals: Fixed constant values directly represented in the source code. Examples: 42 (integer), 3.14 (floating-point), 'A' (character), true (boolean), "Hello" (string).
+
+
+
