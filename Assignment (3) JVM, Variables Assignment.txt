@@ -1,0 +1,71 @@
+1. What is the difference between JVM, JRE and JDK?
+
+-->	1. JVM (Java Virtual Machine): It's an abstract machine that provides a runtime environment in which Java bytecode can be 	 	   executed. It's responsible for interpreting Java bytecode and translating it into machine code for the host operating system.
+	2. JRE (Java Runtime Environment): It includes the JVM along with libraries and other files necessary for running Java 	 	  	   applications but does not include development tools such as compilers and debuggers.
+	3. JDK (Java Development Kit): It's a full-featured software development kit that includes the JRE along with development tools 	   such as a compiler (javac), debugger (jdb), and other tools needed to develop Java applications.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+2. How is Java programming language machine and platform independent?
+
+-->	Java achieves machine and platform independence through bytecode compilation and execution by the Java Virtual Machine (JVM).
+
+	1) Bytecode Compilation: Java source code is compiled into platform-independent bytecode instead of native machine code.
+	2) Java Virtual Machine (JVM): Bytecode is executed by the JVM, a platform-specific runtime environment. The JVM abstracts the 		   underlying hardware and operating system, providing a consistent execution environment.
+	3) Write Once, Run Anywhere (WORA): Since bytecode is platform-independent and executed by the JVM, Java programs can run on any 	   device or platform with a compatible JVM implementation.
+	4) Platform-Specific Implementations: While the JVM is platform-specific, Java implementations exist for various platforms, 		   ensuring Java programs can run seamlessly across different environments.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+3. Explain how Java programs are executed by the JVM?
+
+-->	Java programs are executed by the Java Virtual Machine (JVM) through a systematic process:
+
+	1) Compilation: Java source code (.java files) undergoes compilation by the Java compiler (javac) to produce bytecode (.class 	  	   files). Bytecode serves as an intermediary form that is independent of the underlying hardware and operating system.
+	2) Class Loading: The JVM's class loader subsystem loads the compiled bytecode into memory. This involves three types of class 	 	   loaders: Bootstrap, Extension, and Application class loaders, which collectively load classes as required during execution.	
+	3) Bytecode Verification: Prior to execution, the JVM verifies the bytecode's integrity to ensure compliance with Java's safety 	   and security standards. This step helps prevent runtime errors and security vulnerabilities.
+	4) Execution: The JVM interprets bytecode instructions or employs a Just-In-Time (JIT) compiler to translate bytecode into native 	   machine code dynamically. This process enables the execution of Java programs on the target platform.
+	5) Runtime Environment: The JVM provides a runtime environment for executing Java programs, encompassing tasks such as memory 	  	   management (garbage collection), exception handling, and thread management. Additionally, it facilitates interaction with the 	   underlying operating system for input/output operations and system-level tasks.
+	6) Optimization (Optional): Some modern JVM implementations incorporate optimizations during execution, such as method inlining 	   and loop unrolling, to enhance performance further.
+	7) Garbage Collection: Automatic memory management is performed by the JVM through garbage collection. This process identifies and 	   deallocates unused objects, preventing memory leaks and optimizing memory utilization.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+4. What is the use of var args?
+
+-->	The varargs feature in Java allows methods to accept a variable number of arguments of the same type. Its main uses include:
+	
+	1. Flexible Parameter Handling: With varargs, methods can accept zero or more arguments of a specified type, offering flexibility 	   in method invocation.
+	2. Simplified Method Overloading: Instead of creating multiple overloaded methods for different argument counts, varargs enables a 	   single method signature to handle varying numbers of arguments, reducing code duplication.
+	3. Concise Syntax: Using varargs results in concise method invocations without the need to explicitly create arrays or specify 	  	   argument counts, enhancing code readability.
+	4. Improved API Design: varargs facilitates cleaner and more intuitive API design by providing a simpler interface for methods 	              	   that accept variable arguments, enhancing usability.
+	5. Backward Compatibility: Methods utilizing varargs remain compatible with existing code that does not use this feature, ensuring 	   seamless interaction with legacy systems.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+5. What are the types of variables in Java?
+
+-->	In Java, variables come in four types:
+	
+	1. Local Variables: These are declared within methods or blocks and are only accessible in the scope where they're defined.
+	2. Instance Variables: Each instance (or object) of a class has its own copy of these variables. They're defined at the class 		   level but belong to individual objects.
+	3. Class Variables: Also known as static variables, these are shared among all instances of a class. They're defined with the 	     	   static keyword.	
+	4. Parameters: These variables receive values when methods or constructors are called. They act as placeholders for data passed 	   into these functions.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+6. How many types of memory areas are allocated by JVM?
+
+-->	In the Java Virtual Machine (JVM), memory is divided into several areas. There are mainly five types of memory areas allocated by 	the JVM:
+
+	1. Heap Memory: This is the runtime data area where objects are allocated. It's shared among all threads, and memory for new 	    	   objects is allocated on the heap.
+	2. Stack Memory: Each thread in a Java application has its own stack memory. It's used for method invocations and local variables. 	   Stack memory is typically faster to access than heap memory.
+	3. Method Area (PermGen or Metaspace): This area stores class structures such as class metadata, static fields, and method 	    	   bytecode. In Java 8 and later versions, PermGen has been replaced by Metaspace.
+	4. PC Registers: Each thread in Java has its own program counter (PC) register, which keeps track of the execution point of the 	   thread.
+	5. Native Method Stacks: This area contains native method information used in JNI (Java Native Interface) calls.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+7. What is Just-in-time Compiler (JIT).
+
+-->	The Just-In-Time (JIT) compiler is a component of the Java Virtual Machine (JVM) that improves the performance of Java 	applications by dynamically compiling bytecode into native machine code at runtime.JIT compiler plays a crucial role in improving 	the performance of Java applications by dynamically translating bytecode into native machine code during runtime.
